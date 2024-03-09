@@ -11,7 +11,7 @@ function BasicExample(props) {
       <Card.Body>
         <Card.Title>{title}</Card.Title>
         <Card.Text>
-          {price} {category}
+          {price},{category}
         </Card.Text>
         <Button variant="primary">crepa</Button>
       </Card.Body>

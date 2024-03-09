@@ -1,11 +1,20 @@
 import card from './card'
-import books from './books/fantasy.json';
+
 function book(){
-    <div className="book">
-        <card title = "./books/fantasy.json"/>
-        <card img = "./books/fantasy.json"/>
-        <card price = "./books/fantasy.json"/>
-        <card category = "./books/fantasy.json"/>
-    </div>
-}
+    const booksData = require('./books/fantasy.json'); // Import the array of books from the JSON file
+
+    return (
+      <div className="book">
+        {booksData.map((book, index) => (
+          <card
+            key={index}
+            title={book.title}
+            img={book.img}
+            price={book.price}
+            category={book.category}
+          />
+        ))}
+      </div>
+    );
+  }
 export default book;

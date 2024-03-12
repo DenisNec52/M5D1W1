@@ -4,6 +4,8 @@ import React, { useEffect } from 'react';
 import Navbar from "./navbar";
 import Myfooter from "./footer";
 import AllTheBooks from "./AllTheBooks";
+import Container from 'react-bootstrap/Container';
+
 function App() {
   useEffect(() => {
     // Display a welcome alert when the component mounts
@@ -11,9 +13,11 @@ function App() {
   }, []);
   return (
     <>
-            <Navbar /> {}
-            <AllTheBooks /> {}
-            <Myfooter /> {}
+            <Navbar />
+            <Container>  
+            <AllTheBooks/>
+            </Container>
+            <Myfooter />
 </>
 )}
 

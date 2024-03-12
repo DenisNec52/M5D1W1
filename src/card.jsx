@@ -1,21 +1,26 @@
 import React from 'react';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
+import "./card.css";
 
 function BasicExample(props) {
   const { img, title, price, category } = props;
 
   return (
-    <Card style={{ width: '18rem' }}>
+    <div className='card'>
+    <Card style={{ width: '14rem' }}>
       <Card.Img variant="top" src={img} />
       <Card.Body>
         <Card.Title>{title}</Card.Title>
         <Card.Text>
-          {price},{category}
+          {category}
+          <hr />
+          <div className="price">{price}</div>
         </Card.Text>
-        <Button variant="primary">crepa</Button>
+        <Button variant="primary">Add To Cart</Button>
       </Card.Body>
     </Card>
+    </div>
   );
 }
 

@@ -1,0 +1,20 @@
+.welcome-nerd-container {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  
+  .welcome-nerd-title {
+    color: #4285f4; /* Colore del testo: Blu Google */
+    font-size: 2.5em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-bottom: 10px;
+  }
+  
+  .welcome-nerd-subtitle {
+    color: #666;
+    font-size: 1.2em;
+    font-weight: 300;
+    max-width: 600px;
+    margin: 0 auto;
+  }

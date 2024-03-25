@@ -4,5 +4,15 @@
     font-size:medium;
     width: 14rem;
     height: 38.1056rem;
-    border-color: blue;
+    border-style: solid;
+    border-color: blueviolet;
+    border-width: 1px;
+}
+
+.text-center.comment{
+    text-align: center;
+    font-family:fantasy;
+    font-size:medium;
+    width: 14rem;
+    height: 19.0528rem;
 }

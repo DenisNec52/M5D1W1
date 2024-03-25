@@ -3,10 +3,11 @@ import React, { useState } from 'react';
 import { Container, Nav, Navbar, Form, Button } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShoppingCart } from '@fortawesome/free-solid-svg-icons'; // Importa l'icona del carrello
+import MyButton from './MyButton';
 
-function MyNav({ handleAddToCart }) {
+function MyNav( props, { handleAddToCart }) {
   const [cartCount, setCartCount] = useState(0);
-
+  const {theme, onClick} = props;
   // Funzione per aggiungere un libro al carrello
   const handleAddToCartClick = () => {
     if (handleAddToCart) {
@@ -16,7 +17,7 @@ function MyNav({ handleAddToCart }) {
   };
 
   return (
-    <Navbar expand="lg" bg="dark" data-bs-theme="dark">
+    <Navbar expand="lg" bg = {theme} variant = {theme}>
       <Container fluid>
         <Navbar.Brand href="#">EpibookPers</Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
@@ -30,11 +31,12 @@ function MyNav({ handleAddToCart }) {
             <Form.Control type="search" placeholder="Search" className="me-2" aria-label="Search" />
             <Button variant="outline-success">Search</Button>
           </Form>
-          <Button variant="outline-light" className='ms-2' onClick={handleAddToCartClick}>
+          <Button variant="outline-light" className='ms-2 me-2' onClick={handleAddToCartClick}>
             <FontAwesomeIcon icon={faShoppingCart} />
             {cartCount > 0 && <span className="ms-1">{cartCount}</span>}
           </Button>
         </Navbar.Collapse>
+        <MyButton theme = {theme}changeTheme = {onClick}/>
       </Container>
     </Navbar>
   );

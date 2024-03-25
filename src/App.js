@@ -5,14 +5,16 @@ import MyFooter from './components/MyFooter'
 import Welcome from './components/Welcome'
 import AllTheBooks from './components/AllTheBooks'
 import { Container } from 'react-bootstrap'
+import { useState } from 'react'
 
 function App() {
+  const [theme, setTheme] = useState('light')
   return (
     <>
-      <MyNav />
+      <MyNav theme={theme} onClick = {setTheme} />
       <Container>
         <Welcome />
-        <AllTheBooks/>
+        <AllTheBooks />
       </Container>
       <MyFooter />
     </>
